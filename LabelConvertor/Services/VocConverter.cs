@@ -77,12 +77,17 @@ namespace LabelConvertor
 
 	public static class VocToYoloConverter
 	{
-		public static void Convert(string vocDir, string outputDir)
+		public static void Convert(string vocDir, string outputDir, string[] preDefinedClasses = null)
 		{
 			if (!Directory.Exists(outputDir))
 				Directory.CreateDirectory(outputDir);
 
 			List<string> classes = new List<string>();
+
+			if (preDefinedClasses != null)
+			{
+				classes.AddRange (preDefinedClasses);
+			}
 
 			foreach (var xmlFile in Directory.GetFiles (vocDir, "*.xml"))
 			{
@@ -136,11 +141,30 @@ namespace LabelConvertor
 				h * dh
 			);
 		}
+
+		public static string [] ExtractClasses (string vocDir)
+		{
+			if (!Directory.Exists(vocDir))
+				throw new DirectoryNotFoundException(vocDir);
+
+			List<string> classes = new List<string>();
+
+			foreach (var xmlFile in Directory.GetFiles (vocDir, "*.xml"))
+			{
+				var anno = VocParser.Parse(xmlFile);
+				foreach (var obj in anno.Objects)
+				{
+					if (!classes.Contains (obj.Name))
+						classes.Add (obj.Name);
+				}
+			}
+			return classes.ToArray ();
+		}
 	}
 
 	public static class VocToCocoConverter
 	{
-		public static void Convert(string vocDir, string jsonSavePath)
+		public static void Convert(string vocDir, string jsonSavePath, string[] preDefinedClasses = null)
 		{
 			if (!Directory.Exists(vocDir))
 				throw new DirectoryNotFoundException(vocDir);
@@ -148,6 +172,22 @@ namespace LabelConvertor
 			CocoDataset coco = new CocoDataset();
 
 			Dictionary<string, int> categoryMap = new Dictionary<string, int>(); // name → id (from 1)
+
+			if (preDefinedClasses != null)
+			{
+				foreach (var category in preDefinedClasses)
+				{
+					int catId = categoryMap.Count + 1;
+					categoryMap [category] = catId;
+					coco.categories.Add (new Category
+					{
+						id = catId,
+						name = category,
+						supercategory = "none"
+					});
+				}
+			}
+
 			int imageId = 0;
 			int annotationId = 0;
 			int categoryIdCounter = 1;

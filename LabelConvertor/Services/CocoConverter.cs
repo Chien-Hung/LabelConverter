@@ -137,7 +137,7 @@ namespace LabelConvertor
 
 	public static class CocoToYoloConverter
 	{
-		public static void Convert(string jsonPath, string txtSavePath)
+		public static void Convert(string jsonPath, string txtSavePath, string[] preDefinedClasses = null)
 		{
 			var coco = CocoUtils.Load(jsonPath);
 			var annByImage = CocoUtils.GroupByImage(coco);
@@ -145,16 +145,16 @@ namespace LabelConvertor
 			if (!Directory.Exists(txtSavePath))
 				Directory.CreateDirectory(txtSavePath);
 
-			// classes.txt（依照 category id 排序）
 			var categories = coco.categories.OrderBy(c => c.id).ToList();
+
 			File.WriteAllLines(
 				Path.Combine(txtSavePath, "classes.txt"),
-				categories.Select(c => c.name)
+				preDefinedClasses
 			);
 
-			var catIdToIndex = categories
-				.Select((c, i) => new { c.id, index = i })
-				.ToDictionary(x => x.id, x => x.index);
+			var catIdToName = categories
+				.Select(c => new { c.id, c.name })
+				.ToDictionary(x => x.id, x => x.name);
 
 			foreach (var img in coco.images)
 			{
@@ -180,8 +180,8 @@ namespace LabelConvertor
 						float wn = w / img.width;
 						float hn = h / img.height;
 
-						int classIndex = catIdToIndex[ann.category_id];
-
+						int classIndex = Array.IndexOf(preDefinedClasses, catIdToName[ann.category_id]);
+						
 						sw.WriteLine (
 							$"{classIndex} {xc:F6} {yc:F6} {wn:F6} {hn:F6}"
 						);

@@ -11,6 +11,21 @@ namespace LabelConvertor
 {
 	public class CocoToVoc
 	{
+		public static string [] ExtractClasses (string jsonFile)
+		{
+			if (!File.Exists(jsonFile))
+			{
+				throw new FileNotFoundException($"JSON file not found: {jsonFile}");
+			}
+
+			string jsonContent = File.ReadAllText(jsonFile);
+			CocoAnnotation coco = JsonConvert.DeserializeObject<CocoAnnotation>(jsonContent);
+			var classes = coco.categories.ToDictionary(c => c.id, c => c.name);
+			var classNames = classes.Values.ToArray();
+
+			return classNames;
+		}
+
 		public class CocoAnnotation
 		{
 			public List<Category> categories { get; set; }

@@ -22,6 +22,8 @@ namespace LabelConvertor.Draw
 
 		public void Draw(Bitmap bmp, string imageFile)
 		{
+			if (_jsonPath == "") return;
+
 			string jsonContent = File.ReadAllText(_jsonPath);
 			CocoAnnotation coco = JsonConvert.DeserializeObject<CocoAnnotation>(jsonContent);
 

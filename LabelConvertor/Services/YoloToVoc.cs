@@ -154,5 +154,12 @@ namespace LabelConvertor
 
 			Console.WriteLine("YOLO轉換為VOC XML完成!");
 		}
+
+		public static string[] ExtractClasses (string yoloDir)
+		{
+			var classesFile = Path.Combine(yoloDir, "classes.txt");
+			Dictionary<int, string> classDict = ReadYoLoClass (classesFile);
+			return classDict.Values.ToArray ();
+		}
 	}
 }

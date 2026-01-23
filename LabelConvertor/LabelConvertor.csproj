@@ -92,17 +92,17 @@
     <Compile Include="delete\VocToYolo.cs" />
     <Compile Include="Services\YoloToCoco.cs" />
     <Compile Include="Services\YoloToVoc.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="UI\LabelConverterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UI\LabelConverterControl.Designer.cs">
+      <DependentUpon>LabelConverterControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl2.cs">
+    <Compile Include="UI\ImageBoxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="UI\ImageBoxControl.Designer.cs">
+      <DependentUpon>ImageBoxControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -116,11 +116,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UI\LabelConverterControl.resx">
+      <DependentUpon>LabelConverterControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ImageBoxControl.resx">
+      <DependentUpon>ImageBoxControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

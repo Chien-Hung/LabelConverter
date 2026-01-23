@@ -48,10 +48,10 @@ namespace LabelConvertor.Draw
 				double height = double.Parse(parts[4]);
 
 				// 計算邊界框的實際座標 (像素)
-				int xmin = (int)((xCenter - width / 2) * imageWidth);
-				int ymin = (int)((yCenter - height / 2) * imageHeight);
-				int xmax = (int)((xCenter + width / 2) * imageWidth);
-				int ymax = (int)((yCenter + height / 2) * imageHeight);
+				int xmin = (int)Math.Round((xCenter - width / 2) * imageWidth);
+				int ymin = (int)Math.Round((yCenter - height / 2) * imageHeight);
+				int xmax = (int)Math.Round((xCenter + width / 2) * imageWidth);
+				int ymax = (int)Math.Round((yCenter + height / 2) * imageHeight);
 				string className = classDict[classId];
 
 				// 繪製邊界框

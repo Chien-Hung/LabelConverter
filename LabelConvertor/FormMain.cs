@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static LabelConvertor.CocoToVoc;
+using LabelConvertor.UI;
+using System.Xml.Serialization;
 
 
 // 可以參考 https://zhuanlan.zhihu.com/p/461488682
@@ -30,8 +32,11 @@ namespace LabelConvertor
 		public string YoloPath => txtYoloLabel.Text;
 		public string CocoPath => txtCoCo.Text;
 
+		private LabelConverterControl userControl1;
+		private ImageBoxControl userControl3;
+
 		// 常見影像副檔名
-		string[] imageExtensions = { ".jpg", ".jpeg", ".png", ".bmp" };
+		private string[] imageExtensions = { ".jpg", ".jpeg", ".png", ".bmp" };
 
 		public FormMain ()
 		{
@@ -45,10 +50,19 @@ namespace LabelConvertor
 			
 			txtCoCo.Text = "example\\Coco\\annotations.json";
 			AddImagesToListBox (ImagePath);
+
+			userControl1 = new LabelConverterControl ();
+			userControl1.Dock = DockStyle.Fill;
+			tabPage2.Controls.Add(userControl1);
+			tabControl1.SelectedTab = tabPage2;
+
+			ImageBoxControl userControl3 = new ImageBoxControl (userControl1);
+			userControl3.Dock = DockStyle.Fill;
+			tabPage3.Controls.Add (userControl3);
 		}
 
 		private void btnConvert_Click (object sender, EventArgs e)
-		{
+		{			
 			ConvertService.Execute(cmbMode.Text, this);
 		}
 		
@@ -174,6 +188,11 @@ namespace LabelConvertor
 				pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 				pictureBox1.Dock = DockStyle.Fill;
 			}
+		}
+
+		private void cmbData_SelectedIndexChanged (object sender, EventArgs e)
+		{
+
 		}
 	}
 }

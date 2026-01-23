@@ -164,8 +164,7 @@ namespace LabelConvertor
 		// ----------------------------------------------------
 		// Main Function = parseXmlFiles()
 		// ----------------------------------------------------
-		public void Convert(
-			string imagePath, string annoPath, string jsonOutput)
+		public void Convert(string imagePath, string annoPath, string jsonOutput, string[] preDefinedClasses = null)
 		{
 			if (!Directory.Exists(imagePath))
 				throw new Exception($"ERROR {imagePath} does not exist");
@@ -176,9 +175,13 @@ namespace LabelConvertor
 			// Load class list
 			string classFile = Path.Combine(annoPath, "classes.txt");
 			var categories = File.ReadAllLines(classFile).Select(x => x.Trim()).ToList();
-			var categoryDict = categories.Select((v, i) => new { v, i }).ToDictionary(x => x.i, x => x.v);
-			AddCategoryItems(categoryDict);
+			
+			var categoryDict = preDefinedClasses != null
+				? preDefinedClasses.Select((v, i) => new { v, i }).ToDictionary(x => x.i, x => x.v)
+				: categories.Select((v, i) => new { v, i }).ToDictionary(x => x.i, x => x.v);
 
+			AddCategoryItems (categoryDict);
+			
 			var imageFiles = Directory.GetFiles(imagePath);
 			var annoFiles = Directory.GetFiles(annoPath);
 

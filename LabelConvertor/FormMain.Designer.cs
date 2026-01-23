@@ -61,49 +61,51 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.checkBox3 = new System.Windows.Forms.CheckBox();
+			this.button6 = new System.Windows.Forms.Button();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.checkBox2 = new System.Windows.Forms.CheckBox();
+			this.button5 = new System.Windows.Forms.Button();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.button4 = new System.Windows.Forms.Button();
+			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.label13 = new System.Windows.Forms.Label();
+			this.button8 = new System.Windows.Forms.Button();
+			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.label12 = new System.Windows.Forms.Label();
+			this.button7 = new System.Windows.Forms.Button();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.button10 = new System.Windows.Forms.Button();
+			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.button9 = new System.Windows.Forms.Button();
+			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.button3 = new System.Windows.Forms.Button();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label9 = new System.Windows.Forms.Label();
-			this.button4 = new System.Windows.Forms.Button();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.checkBox2 = new System.Windows.Forms.CheckBox();
-			this.button5 = new System.Windows.Forms.Button();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.checkBox3 = new System.Windows.Forms.CheckBox();
-			this.button6 = new System.Windows.Forms.Button();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
-			this.button7 = new System.Windows.Forms.Button();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.label13 = new System.Windows.Forms.Label();
-			this.button8 = new System.Windows.Forms.Button();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.button9 = new System.Windows.Forms.Button();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.button10 = new System.Windows.Forms.Button();
-			this.textBox10 = new System.Windows.Forms.TextBox();
-			this.label17 = new System.Windows.Forms.Label();
-			this.label18 = new System.Windows.Forms.Label();
-			this.label19 = new System.Windows.Forms.Label();
-			this.button11 = new System.Windows.Forms.Button();
-			this.textBox11 = new System.Windows.Forms.TextBox();
 			this.button12 = new System.Windows.Forms.Button();
 			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.button11 = new System.Windows.Forms.Button();
+			this.textBox11 = new System.Windows.Forms.TextBox();
+			this.label17 = new System.Windows.Forms.Label();
+			this.button3 = new System.Windows.Forms.Button();
+			this.label18 = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.label19 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabVisualization.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -186,7 +188,7 @@
 			this.tabVisualization.Location = new System.Drawing.Point(4, 29);
 			this.tabVisualization.Name = "tabVisualization";
 			this.tabVisualization.Padding = new System.Windows.Forms.Padding(3);
-			this.tabVisualization.Size = new System.Drawing.Size(1351, 743);
+			this.tabVisualization.Size = new System.Drawing.Size(1342, 633);
 			this.tabVisualization.TabIndex = 1;
 			this.tabVisualization.Text = "Visualization";
 			this.tabVisualization.UseVisualStyleBackColor = true;
@@ -200,15 +202,16 @@
 			this.panel2.Controls.Add(this.pictureBox1);
 			this.panel2.Location = new System.Drawing.Point(236, 6);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1110, 731);
+			this.panel2.Size = new System.Drawing.Size(1101, 621);
 			this.panel2.TabIndex = 12;
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(1104, 725);
+			this.pictureBox1.Size = new System.Drawing.Size(1101, 621);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
@@ -224,14 +227,14 @@
 			this.panel1.Controls.Add(this.cmbLabelFormat);
 			this.panel1.Location = new System.Drawing.Point(3, 6);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(227, 731);
+			this.panel1.Size = new System.Drawing.Size(227, 621);
 			this.panel1.TabIndex = 11;
 			// 
 			// statusStrip1
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssLabel1});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 706);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 596);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(227, 25);
 			this.statusStrip1.TabIndex = 0;
@@ -252,7 +255,7 @@
 			this.listBox1.ItemHeight = 20;
 			this.listBox1.Location = new System.Drawing.Point(3, 37);
 			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(221, 664);
+			this.listBox1.Size = new System.Drawing.Size(221, 544);
 			this.listBox1.TabIndex = 7;
 			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
 			// 
@@ -289,9 +292,9 @@
 			this.tabConvertor.Location = new System.Drawing.Point(4, 29);
 			this.tabConvertor.Name = "tabConvertor";
 			this.tabConvertor.Padding = new System.Windows.Forms.Padding(3);
-			this.tabConvertor.Size = new System.Drawing.Size(1351, 743);
+			this.tabConvertor.Size = new System.Drawing.Size(1342, 633);
 			this.tabConvertor.TabIndex = 0;
-			this.tabConvertor.Text = "Convertor";
+			this.tabConvertor.Text = "Converter";
 			this.tabConvertor.UseVisualStyleBackColor = true;
 			// 
 			// cmbMode
@@ -324,12 +327,14 @@
 			// 
 			// flowLayoutPanel1
 			// 
+			this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.flowLayoutPanel1.Controls.Add(this.pnlCoco);
 			this.flowLayoutPanel1.Controls.Add(this.pnlVoc);
 			this.flowLayoutPanel1.Controls.Add(this.pnlYolo);
 			this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 42);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(1342, 274);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(1330, 274);
 			this.flowLayoutPanel1.TabIndex = 6;
 			// 
 			// pnlCoco
@@ -340,7 +345,7 @@
 			this.pnlCoco.Controls.Add(this.label6);
 			this.pnlCoco.Location = new System.Drawing.Point(3, 3);
 			this.pnlCoco.Name = "pnlCoco";
-			this.pnlCoco.Size = new System.Drawing.Size(1335, 80);
+			this.pnlCoco.Size = new System.Drawing.Size(1320, 80);
 			this.pnlCoco.TabIndex = 4;
 			// 
 			// btnCocoFile
@@ -361,7 +366,7 @@
 			this.txtCoCo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.txtCoCo.Location = new System.Drawing.Point(113, 39);
 			this.txtCoCo.Name = "txtCoCo";
-			this.txtCoCo.Size = new System.Drawing.Size(1216, 29);
+			this.txtCoCo.Size = new System.Drawing.Size(1202, 29);
 			this.txtCoCo.TabIndex = 3;
 			// 
 			// label6
@@ -382,7 +387,7 @@
 			this.pnlVoc.Controls.Add(this.label7);
 			this.pnlVoc.Location = new System.Drawing.Point(3, 89);
 			this.pnlVoc.Name = "pnlVoc";
-			this.pnlVoc.Size = new System.Drawing.Size(1335, 80);
+			this.pnlVoc.Size = new System.Drawing.Size(1320, 80);
 			this.pnlVoc.TabIndex = 3;
 			// 
 			// btnVocFolder
@@ -403,7 +408,7 @@
 			this.txtVoc.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.txtVoc.Location = new System.Drawing.Point(117, 39);
 			this.txtVoc.Name = "txtVoc";
-			this.txtVoc.Size = new System.Drawing.Size(1212, 29);
+			this.txtVoc.Size = new System.Drawing.Size(1198, 29);
 			this.txtVoc.TabIndex = 3;
 			// 
 			// label7
@@ -424,7 +429,7 @@
 			this.pnlYolo.Controls.Add(this.label10);
 			this.pnlYolo.Location = new System.Drawing.Point(3, 175);
 			this.pnlYolo.Name = "pnlYolo";
-			this.pnlYolo.Size = new System.Drawing.Size(1335, 80);
+			this.pnlYolo.Size = new System.Drawing.Size(1320, 80);
 			this.pnlYolo.TabIndex = 5;
 			// 
 			// btnYoloLabel
@@ -445,7 +450,7 @@
 			this.txtYoloLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.txtYoloLabel.Location = new System.Drawing.Point(117, 39);
 			this.txtYoloLabel.Name = "txtYoloLabel";
-			this.txtYoloLabel.Size = new System.Drawing.Size(1212, 29);
+			this.txtYoloLabel.Size = new System.Drawing.Size(1198, 29);
 			this.txtYoloLabel.TabIndex = 5;
 			// 
 			// label10
@@ -466,11 +471,13 @@
 			this.tabControl1.Controls.Add(this.tabConvertor);
 			this.tabControl1.Controls.Add(this.tabVisualization);
 			this.tabControl1.Controls.Add(this.tabPage1);
+			this.tabControl1.Controls.Add(this.tabPage2);
+			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.tabControl1.Location = new System.Drawing.Point(12, 48);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1359, 776);
+			this.tabControl1.Size = new System.Drawing.Size(1350, 666);
 			this.tabControl1.TabIndex = 10;
 			// 
 			// tabPage1
@@ -488,10 +495,94 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(1351, 743);
+			this.tabPage1.Size = new System.Drawing.Size(1342, 633);
 			this.tabPage1.TabIndex = 2;
 			this.tabPage1.Text = "tabPage1";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// checkBox3
+			// 
+			this.checkBox3.AutoSize = true;
+			this.checkBox3.Location = new System.Drawing.Point(12, 93);
+			this.checkBox3.Name = "checkBox3";
+			this.checkBox3.Size = new System.Drawing.Size(59, 24);
+			this.checkBox3.TabIndex = 16;
+			this.checkBox3.Text = "Test";
+			this.checkBox3.UseVisualStyleBackColor = true;
+			// 
+			// button6
+			// 
+			this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button6.Location = new System.Drawing.Point(84, 89);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(100, 32);
+			this.button6.TabIndex = 14;
+			this.button6.Text = "Image Folder";
+			this.button6.UseVisualStyleBackColor = true;
+			// 
+			// textBox6
+			// 
+			this.textBox6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox6.Location = new System.Drawing.Point(190, 90);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(1152, 29);
+			this.textBox6.TabIndex = 15;
+			// 
+			// checkBox2
+			// 
+			this.checkBox2.AutoSize = true;
+			this.checkBox2.Location = new System.Drawing.Point(12, 55);
+			this.checkBox2.Name = "checkBox2";
+			this.checkBox2.Size = new System.Drawing.Size(52, 24);
+			this.checkBox2.TabIndex = 13;
+			this.checkBox2.Text = "Val";
+			this.checkBox2.UseVisualStyleBackColor = true;
+			// 
+			// button5
+			// 
+			this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button5.Location = new System.Drawing.Point(84, 51);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(100, 32);
+			this.button5.TabIndex = 11;
+			this.button5.Text = "Image Folder";
+			this.button5.UseVisualStyleBackColor = true;
+			// 
+			// textBox5
+			// 
+			this.textBox5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox5.Location = new System.Drawing.Point(190, 52);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(1152, 29);
+			this.textBox5.TabIndex = 12;
+			// 
+			// checkBox1
+			// 
+			this.checkBox1.AutoSize = true;
+			this.checkBox1.Location = new System.Drawing.Point(12, 17);
+			this.checkBox1.Name = "checkBox1";
+			this.checkBox1.Size = new System.Drawing.Size(66, 24);
+			this.checkBox1.TabIndex = 10;
+			this.checkBox1.Text = "Train";
+			this.checkBox1.UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button4.Location = new System.Drawing.Point(84, 13);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(100, 32);
+			this.button4.TabIndex = 8;
+			this.button4.Text = "Image Folder";
+			this.button4.UseVisualStyleBackColor = true;
+			// 
+			// textBox4
+			// 
+			this.textBox4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox4.Location = new System.Drawing.Point(190, 14);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(1152, 29);
+			this.textBox4.TabIndex = 9;
 			// 
 			// flowLayoutPanel2
 			// 
@@ -520,6 +611,73 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(1335, 160);
 			this.panel3.TabIndex = 4;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(11, 118);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(40, 20);
+			this.label13.TabIndex = 10;
+			this.label13.Text = "Test";
+			// 
+			// button8
+			// 
+			this.button8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button8.Location = new System.Drawing.Point(71, 113);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(100, 32);
+			this.button8.TabIndex = 8;
+			this.button8.Text = "Json File";
+			this.button8.UseVisualStyleBackColor = true;
+			// 
+			// textBox8
+			// 
+			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox8.Location = new System.Drawing.Point(177, 115);
+			this.textBox8.Name = "textBox8";
+			this.textBox8.Size = new System.Drawing.Size(1152, 29);
+			this.textBox8.TabIndex = 9;
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Location = new System.Drawing.Point(11, 80);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(33, 20);
+			this.label12.TabIndex = 7;
+			this.label12.Text = "Val";
+			// 
+			// button7
+			// 
+			this.button7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button7.Location = new System.Drawing.Point(71, 75);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(100, 32);
+			this.button7.TabIndex = 5;
+			this.button7.Text = "Json File";
+			this.button7.UseVisualStyleBackColor = true;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox7.Location = new System.Drawing.Point(177, 77);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(1152, 29);
+			this.textBox7.TabIndex = 6;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(11, 42);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(47, 20);
+			this.label11.TabIndex = 4;
+			this.label11.Text = "Train";
 			// 
 			// button1
 			// 
@@ -569,6 +727,73 @@
 			this.panel4.Size = new System.Drawing.Size(1335, 160);
 			this.panel4.TabIndex = 3;
 			// 
+			// button10
+			// 
+			this.button10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button10.Location = new System.Drawing.Point(71, 113);
+			this.button10.Name = "button10";
+			this.button10.Size = new System.Drawing.Size(100, 32);
+			this.button10.TabIndex = 17;
+			this.button10.Text = "Label Folder";
+			this.button10.UseVisualStyleBackColor = true;
+			// 
+			// textBox10
+			// 
+			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox10.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox10.Location = new System.Drawing.Point(177, 115);
+			this.textBox10.Name = "textBox10";
+			this.textBox10.Size = new System.Drawing.Size(1152, 29);
+			this.textBox10.TabIndex = 18;
+			// 
+			// button9
+			// 
+			this.button9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button9.Location = new System.Drawing.Point(71, 75);
+			this.button9.Name = "button9";
+			this.button9.Size = new System.Drawing.Size(100, 32);
+			this.button9.TabIndex = 15;
+			this.button9.Text = "Label Folder";
+			this.button9.UseVisualStyleBackColor = true;
+			// 
+			// textBox9
+			// 
+			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox9.Location = new System.Drawing.Point(177, 77);
+			this.textBox9.Name = "textBox9";
+			this.textBox9.Size = new System.Drawing.Size(1152, 29);
+			this.textBox9.TabIndex = 16;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(11, 118);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(40, 20);
+			this.label14.TabIndex = 14;
+			this.label14.Text = "Test";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(11, 80);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(33, 20);
+			this.label15.TabIndex = 13;
+			this.label15.Text = "Val";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(11, 42);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(47, 20);
+			this.label16.TabIndex = 12;
+			this.label16.Text = "Train";
+			// 
 			// button2
 			// 
 			this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -617,280 +842,25 @@
 			this.panel5.Size = new System.Drawing.Size(1335, 160);
 			this.panel5.TabIndex = 5;
 			// 
-			// button3
+			// button12
 			// 
-			this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button3.Location = new System.Drawing.Point(71, 37);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(100, 32);
-			this.button3.TabIndex = 4;
-			this.button3.Text = "Label Folder";
-			this.button3.UseVisualStyleBackColor = true;
+			this.button12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button12.Location = new System.Drawing.Point(71, 113);
+			this.button12.Name = "button12";
+			this.button12.Size = new System.Drawing.Size(100, 32);
+			this.button12.TabIndex = 24;
+			this.button12.Text = "Label Folder";
+			this.button12.UseVisualStyleBackColor = true;
 			// 
-			// textBox3
+			// textBox12
 			// 
-			this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox3.Location = new System.Drawing.Point(177, 39);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(1152, 29);
-			this.textBox3.TabIndex = 5;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(7, 9);
-			this.label9.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(95, 20);
-			this.label9.TabIndex = 2;
-			this.label9.Text = "YOLO [ txt ]";
-			// 
-			// button4
-			// 
-			this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button4.Location = new System.Drawing.Point(84, 13);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(100, 32);
-			this.button4.TabIndex = 8;
-			this.button4.Text = "Image Folder";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// textBox4
-			// 
-			this.textBox4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox4.Location = new System.Drawing.Point(190, 14);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(1152, 29);
-			this.textBox4.TabIndex = 9;
-			// 
-			// checkBox1
-			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(12, 17);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(66, 24);
-			this.checkBox1.TabIndex = 10;
-			this.checkBox1.Text = "Train";
-			this.checkBox1.UseVisualStyleBackColor = true;
-			// 
-			// checkBox2
-			// 
-			this.checkBox2.AutoSize = true;
-			this.checkBox2.Location = new System.Drawing.Point(12, 55);
-			this.checkBox2.Name = "checkBox2";
-			this.checkBox2.Size = new System.Drawing.Size(52, 24);
-			this.checkBox2.TabIndex = 13;
-			this.checkBox2.Text = "Val";
-			this.checkBox2.UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button5.Location = new System.Drawing.Point(84, 51);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(100, 32);
-			this.button5.TabIndex = 11;
-			this.button5.Text = "Image Folder";
-			this.button5.UseVisualStyleBackColor = true;
-			// 
-			// textBox5
-			// 
-			this.textBox5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox5.Location = new System.Drawing.Point(190, 52);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(1152, 29);
-			this.textBox5.TabIndex = 12;
-			// 
-			// checkBox3
-			// 
-			this.checkBox3.AutoSize = true;
-			this.checkBox3.Location = new System.Drawing.Point(12, 93);
-			this.checkBox3.Name = "checkBox3";
-			this.checkBox3.Size = new System.Drawing.Size(59, 24);
-			this.checkBox3.TabIndex = 16;
-			this.checkBox3.Text = "Test";
-			this.checkBox3.UseVisualStyleBackColor = true;
-			// 
-			// button6
-			// 
-			this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button6.Location = new System.Drawing.Point(84, 89);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(100, 32);
-			this.button6.TabIndex = 14;
-			this.button6.Text = "Image Folder";
-			this.button6.UseVisualStyleBackColor = true;
-			// 
-			// textBox6
-			// 
-			this.textBox6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox6.Location = new System.Drawing.Point(190, 90);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(1152, 29);
-			this.textBox6.TabIndex = 15;
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(11, 42);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(47, 20);
-			this.label11.TabIndex = 4;
-			this.label11.Text = "Train";
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(11, 80);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(33, 20);
-			this.label12.TabIndex = 7;
-			this.label12.Text = "Val";
-			// 
-			// button7
-			// 
-			this.button7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button7.Location = new System.Drawing.Point(71, 75);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(100, 32);
-			this.button7.TabIndex = 5;
-			this.button7.Text = "Json File";
-			this.button7.UseVisualStyleBackColor = true;
-			// 
-			// textBox7
-			// 
-			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox7.Location = new System.Drawing.Point(177, 77);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(1152, 29);
-			this.textBox7.TabIndex = 6;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(11, 118);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(40, 20);
-			this.label13.TabIndex = 10;
-			this.label13.Text = "Test";
-			// 
-			// button8
-			// 
-			this.button8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button8.Location = new System.Drawing.Point(71, 113);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(100, 32);
-			this.button8.TabIndex = 8;
-			this.button8.Text = "Json File";
-			this.button8.UseVisualStyleBackColor = true;
-			// 
-			// textBox8
-			// 
-			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox8.Location = new System.Drawing.Point(177, 115);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(1152, 29);
-			this.textBox8.TabIndex = 9;
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(11, 118);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(40, 20);
-			this.label14.TabIndex = 14;
-			this.label14.Text = "Test";
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(11, 80);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(33, 20);
-			this.label15.TabIndex = 13;
-			this.label15.Text = "Val";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(11, 42);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(47, 20);
-			this.label16.TabIndex = 12;
-			this.label16.Text = "Train";
-			// 
-			// button9
-			// 
-			this.button9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button9.Location = new System.Drawing.Point(71, 75);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(100, 32);
-			this.button9.TabIndex = 15;
-			this.button9.Text = "Label Folder";
-			this.button9.UseVisualStyleBackColor = true;
-			// 
-			// textBox9
-			// 
-			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox9.Location = new System.Drawing.Point(177, 77);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new System.Drawing.Size(1152, 29);
-			this.textBox9.TabIndex = 16;
-			// 
-			// button10
-			// 
-			this.button10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button10.Location = new System.Drawing.Point(71, 113);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(100, 32);
-			this.button10.TabIndex = 17;
-			this.button10.Text = "Label Folder";
-			this.button10.UseVisualStyleBackColor = true;
-			// 
-			// textBox10
-			// 
-			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox10.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox10.Location = new System.Drawing.Point(177, 115);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.Size = new System.Drawing.Size(1152, 29);
-			this.textBox10.TabIndex = 18;
-			// 
-			// label17
-			// 
-			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(11, 118);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(40, 20);
-			this.label17.TabIndex = 21;
-			this.label17.Text = "Test";
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Location = new System.Drawing.Point(11, 80);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(33, 20);
-			this.label18.TabIndex = 20;
-			this.label18.Text = "Val";
-			// 
-			// label19
-			// 
-			this.label19.AutoSize = true;
-			this.label19.Location = new System.Drawing.Point(11, 42);
-			this.label19.Name = "label19";
-			this.label19.Size = new System.Drawing.Size(47, 20);
-			this.label19.TabIndex = 19;
-			this.label19.Text = "Train";
+			this.textBox12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox12.Location = new System.Drawing.Point(177, 115);
+			this.textBox12.Name = "textBox12";
+			this.textBox12.Size = new System.Drawing.Size(1152, 29);
+			this.textBox12.TabIndex = 25;
 			// 
 			// button11
 			// 
@@ -912,38 +882,96 @@
 			this.textBox11.Size = new System.Drawing.Size(1152, 29);
 			this.textBox11.TabIndex = 23;
 			// 
-			// button12
+			// label17
 			// 
-			this.button12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button12.Location = new System.Drawing.Point(71, 113);
-			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(100, 32);
-			this.button12.TabIndex = 24;
-			this.button12.Text = "Label Folder";
-			this.button12.UseVisualStyleBackColor = true;
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(11, 118);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(40, 20);
+			this.label17.TabIndex = 21;
+			this.label17.Text = "Test";
 			// 
-			// textBox12
+			// button3
 			// 
-			this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button3.Location = new System.Drawing.Point(71, 37);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(100, 32);
+			this.button3.TabIndex = 4;
+			this.button3.Text = "Label Folder";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(11, 80);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(33, 20);
+			this.label18.TabIndex = 20;
+			this.label18.Text = "Val";
+			// 
+			// textBox3
+			// 
+			this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.textBox12.Location = new System.Drawing.Point(177, 115);
-			this.textBox12.Name = "textBox12";
-			this.textBox12.Size = new System.Drawing.Size(1152, 29);
-			this.textBox12.TabIndex = 25;
+			this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.textBox3.Location = new System.Drawing.Point(177, 39);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(1152, 29);
+			this.textBox3.TabIndex = 5;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Location = new System.Drawing.Point(11, 42);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(47, 20);
+			this.label19.TabIndex = 19;
+			this.label19.Text = "Train";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(7, 9);
+			this.label9.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(95, 20);
+			this.label9.TabIndex = 2;
+			this.label9.Text = "YOLO [ txt ]";
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Font = new System.Drawing.Font("新細明體", 9F);
+			this.tabPage2.Location = new System.Drawing.Point(4, 29);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(1342, 633);
+			this.tabPage2.TabIndex = 3;
+			this.tabPage2.Text = "tabPage2";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this.tabPage3.Location = new System.Drawing.Point(4, 29);
+			this.tabPage3.Name = "tabPage3";
+			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage3.Size = new System.Drawing.Size(1342, 633);
+			this.tabPage3.TabIndex = 4;
+			this.tabPage3.Text = "tabPage3";
+			this.tabPage3.UseVisualStyleBackColor = true;
 			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1377, 827);
+			this.ClientSize = new System.Drawing.Size(1366, 721);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.btnImage);
 			this.Controls.Add(this.txtImage);
 			this.Name = "FormMain";
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Label Convertor <Object Detection>";
+			this.Text = "Voc / Yolo / Coco Label Converter <Object Detection>";
 			this.tabVisualization.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1051,6 +1079,8 @@
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label19;
+		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.TabPage tabPage3;
 	}
 }
 
