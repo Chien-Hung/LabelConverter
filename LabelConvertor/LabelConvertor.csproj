@@ -74,13 +74,11 @@
     <Compile Include="Draw\ILabelDrawer.cs" />
     <Compile Include="Draw\VocDrawer.cs" />
     <Compile Include="Draw\YoloDrawer.cs" />
+    <Compile Include="Services\CocoToVoc.cs" />
     <Compile Include="Services\ConvertService.cs" />
     <Compile Include="Services\FileDialogService.cs" />
     <Compile Include="Services\VocConverter.cs" />
     <Compile Include="Services\CocoConverter.cs" />
-    <Compile Include="delete\CocoToVoc.cs" />
-    <Compile Include="delete\CocoToYolo.cs" />
-    <Compile Include="delete\VocToCoco.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +87,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="delete\VocToYolo.cs" />
     <Compile Include="Services\YoloToCoco.cs" />
     <Compile Include="Services\YoloToVoc.cs" />
     <Compile Include="UI\LabelConverterControl.cs">

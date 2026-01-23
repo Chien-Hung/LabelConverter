@@ -287,140 +287,76 @@ namespace LabelConvertor
 
 		private void btnCheckClasses_Click (object sender, EventArgs e)
 		{
-			if (cmbMode.Text.StartsWith ("VOC"))
+			try
 			{
-				var vocDirTrain = txtVocLabelTrain.Text;
-				var classesTrain = VocToYoloConverter.ExtractClasses (vocDirTrain);
-
-				var vocDirVal = txtVocLabelVal.Text;
-				var classesVal = VocToYoloConverter.ExtractClasses (vocDirVal);
-
-				string[] classesTest = null;
-				if (chkTest.Checked)
+				if (cmbMode.Text.StartsWith ("VOC"))
 				{
-					var vocDirTest = txtVocLabelTest.Text;
-					classesTest = VocToYoloConverter.ExtractClasses (vocDirTest);
+					var vocDirTrain = txtVocLabelTrain.Text;
+					var classesTrain = VocToYoloConverter.ExtractClasses (vocDirTrain);
+
+					string[] classesVal = null;
+					if (chkVal.Checked)
+					{
+						var vocDirVal = txtVocLabelVal.Text;
+						classesVal = VocToYoloConverter.ExtractClasses (vocDirVal);
+					}
+
+					string[] classesTest = null;
+					if (chkTest.Checked)
+					{
+						var vocDirTest = txtVocLabelTest.Text;
+						classesTest = VocToYoloConverter.ExtractClasses (vocDirTest);
+					}
+
+					showClassesForm (classesTrain, classesVal, classesTest);
 				}
-
-				showClassesForm (classesTrain, classesVal, classesTest);
-			}
-			else if (cmbMode.Text.StartsWith ("YOLO"))
-			{
-				var yoloDirTrain = txtYoloLabelTrain.Text;
-				var classesTrain = YoloToVOC.ExtractClasses (yoloDirTrain);
-
-				var yoloDirVal = txtYoloLabelVal.Text;
-				var classesVal = YoloToVOC.ExtractClasses (yoloDirVal);
-
-				string[] classesTest = null;
-				if (chkTest.Checked)
+				else if (cmbMode.Text.StartsWith ("YOLO"))
 				{
-					var yoloDirTest = txtYoloLabelTest.Text;
-					classesTest = YoloToVOC.ExtractClasses (yoloDirTest);
+					var yoloDirTrain = txtYoloLabelTrain.Text;
+					var classesTrain = YoloToVOC.ExtractClasses (yoloDirTrain);
+
+					string[] classesVal = null;
+					if (chkVal.Checked)
+					{
+						var yoloDirVal = txtYoloLabelVal.Text;
+						classesVal = YoloToVOC.ExtractClasses (yoloDirVal);
+					}
+
+					string[] classesTest = null;
+					if (chkTest.Checked)
+					{
+						var yoloDirTest = txtYoloLabelTest.Text;
+						classesTest = YoloToVOC.ExtractClasses (yoloDirTest);
+					}
+
+					showClassesForm (classesTrain, classesVal, classesTest);
 				}
-
-				showClassesForm (classesTrain, classesVal, classesTest);
-			}
-			else if (cmbMode.Text.StartsWith ("COCO"))
-			{
-				var jsonFileTrain = txtJsonFileTrain.Text;
-				var classesTrain = CocoToVoc.ExtractClasses (jsonFileTrain);
-				
-				var jsonFileVal = txtJsonFileVal.Text;
-				var classesVal = CocoToVoc.ExtractClasses (jsonFileVal);
-
-				string[] classesTest = null;
-				if (chkTest.Checked)
+				else if (cmbMode.Text.StartsWith ("COCO"))
 				{
-					var jsonFileTest = txtJsonFileTest.Text;
-					classesTest = CocoToVoc.ExtractClasses (jsonFileTest);
+					var jsonFileTrain = txtJsonFileTrain.Text;
+					var classesTrain = CocoToVoc.ExtractClasses (jsonFileTrain);
+
+					string[] classesVal = null;
+					if (chkVal.Checked)
+					{
+						var jsonFileVal = txtJsonFileVal.Text;
+						classesVal = CocoToVoc.ExtractClasses (jsonFileVal);
+					}
+
+					string[] classesTest = null;
+					if (chkTest.Checked)
+					{
+						var jsonFileTest = txtJsonFileTest.Text;
+						classesTest = CocoToVoc.ExtractClasses (jsonFileTest);
+					}
+
+					showClassesForm (classesTrain, classesVal, classesTest);
 				}
-
-				showClassesForm (classesTrain, classesVal, classesTest);
 			}
-		}
-
-		private void showClassesForm0 (string[] classesTrain, string[] classesVal)
-		{
-			// MessageBox.Show ($"COCO標註檔案 '{jsonFile}' 中的類別有:\n{string.Join ("\n", classesVal)}");
-
-			// add classesTrain to datagridview in column Train and classesVal to column Val
-			var allClasses = classesTrain.Union (classesVal).Distinct().OrderBy(c => c).ToList();
-			var form = new Form ();
-			var dgv = new DataGridView
+			catch (Exception ex)
 			{
-				Dock = DockStyle.Fill,
-				AllowUserToAddRows = false,
-				RowHeadersVisible = false,
-				DataSource = allClasses.Select((c, index) => new
-				{
-					ID = index + 1, // 編號列，從 1 開始
-					ClassName = c,
-					Train = classesTrain.Contains(c) ? "Yes" : "No",
-					Val = classesVal.Contains(c) ? "Yes" : "No"
-				}).ToList()
-			};
-
-			// 註冊 DataBindingComplete 事件
-			dgv.DataBindingComplete += (sender, e) =>
-			{
-				// 設置編號列的標題
-				dgv.Columns[0].HeaderText = "No.";
-				dgv.Columns [0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells; // 自動調整寬度
-			};
-
-			form.Controls.Add (dgv);
-			form.StartPosition = FormStartPosition.CenterParent;
-			form.Size = new Size (380, 600);
-			form.Text = "標註檔案中的類別";
-			form.ShowDialog ();
-
-			//var form = new Form();
-			//var dgv = new DataGridView
-			//{
-			//	Dock = DockStyle.Fill,
-			//	ColumnCount = 4,
-			//	RowHeadersVisible = false,
-			//	AllowUserToAddRows = false,
-			//	Columns = 
-			//	{
-			//		[0] = { Name ="ClassId", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill },
-			//		[1] = { Name = "Train", HeaderText = "Train", Width = 100 },
-			//		[2] = { Name = "Val", HeaderText = "Val", Width = 100 },
-			//		[3] = { Name = "Test", HeaderText = "Test", Width = 100 }
-			//	}
-			//};
-
-			//// 計算最大行數
-			//int n = Math.Max(classesTrain.Length, classesVal.Length);
-			//dgv.Rows.Clear();
-			//dgv.Rows.Add(n);
-
-			//// 填充數據
-			//for (int i = 0; i < n; i++)
-			//{
-			//	dgv.Rows[i].Cells[0].Value = i + 1; // 設置 ClassId
-			//	if (i < classesTrain.Length)
-			//		dgv.Rows[i].Cells[1].Value = classesTrain[i]; // 設置 Train
-			//	if (i < classesVal.Length)
-			//		dgv.Rows[i].Cells[2].Value = classesVal[i]; // 設置 Val
-			//}
-
-			//form.Controls.Add(dgv);
-			//form.StartPosition = FormStartPosition.CenterParent;
-			//form.Size = new Size(380, 800);
-			//form.Text = "標註檔案中的類別";
-			//form.ShowDialog();
-
-
-			//var allClasses = new HashSet<string>(classesTrain);
-
-			//var form = new Form ();
-			//var dgv = new DataGridView
-			//{
-			//	Dock = DockStyle.Fill,
-			//	DataSource = classesTrain.Select(c => new { ClassName = c }).ToList()
-			//};
+				MessageBox.Show("Check classes error! Please check your labeled data!\n\n" + ex.ToString ());
+			}
 		}
 
 		private void showClassesForm (string[] classesTrain, string[] classesVal, string[] classesTest)
@@ -572,5 +508,6 @@ namespace LabelConvertor
 
 			return classesAll; 
 		}
+
 	}
 }

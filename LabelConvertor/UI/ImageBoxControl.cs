@@ -113,23 +113,26 @@ namespace LabelConvertor.UI
 
 		private void AddImagesToListBox(string imageDir)
 		{
-			listBox1.Tag = imageDir;
-			var imageFiles = Directory
-				.EnumerateFiles(imageDir, "*.*", SearchOption.TopDirectoryOnly)
-				.Where(f => imageExtensions.Contains(Path.GetExtension(f).ToLower()))
-				.Select(Path.GetFileName)
-				.OrderBy(f => f)
-				.ToArray();
+			if (!Directory.Exists (imageDir)) return;
 
-			listBox1.BeginUpdate();
-			listBox1.Items.Clear();
+			listBox1.Tag = imageDir;
+
+			var imageFiles = Directory
+			.EnumerateFiles(imageDir, "*.*", SearchOption.TopDirectoryOnly)
+			.Where(f => imageExtensions.Contains(Path.GetExtension(f).ToLower()))
+			.Select(Path.GetFileName)
+			.OrderBy(f => f)
+			.ToArray();
+
+			listBox1.BeginUpdate ();
+			listBox1.Items.Clear ();
 
 			foreach (var file in imageFiles)
 			{
-				listBox1.Items.Add(file);
+				listBox1.Items.Add (file);
 			}
 
-			listBox1.EndUpdate();
+			listBox1.EndUpdate ();
 		}
 	}
 }
