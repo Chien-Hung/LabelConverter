@@ -1,5 +1,7 @@
 # LabelConvertor
 
+Deep learning object detection data label converter (voc, yolo, coco).
+
 ![alt tag](./assets/setting.jpg)
 
 ![alt tag](./assets/compare.jpg)
