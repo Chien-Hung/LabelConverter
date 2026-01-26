@@ -1,4 +1,4 @@
-﻿namespace LabelConvertor.UI
+﻿namespace LabelConverter.UI
 {
 	partial class ImageBoxControl
 	{

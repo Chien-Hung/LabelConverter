@@ -1,5 +1,5 @@
-﻿using LabelConvertor.Draw;
-using LabelConvertor.Services;
+﻿using LabelConverter.Draw;
+using LabelConverter.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LabelConvertor
+namespace LabelConverter
 {
 	public enum ConvertMode
 	{

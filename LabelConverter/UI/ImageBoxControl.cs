@@ -1,4 +1,4 @@
-﻿using LabelConvertor.Draw;
+﻿using LabelConverter.Draw;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LabelConvertor.UI
+namespace LabelConverter.UI
 {
 	public partial class ImageBoxControl : UserControl
 	{

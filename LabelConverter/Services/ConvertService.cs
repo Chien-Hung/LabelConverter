@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Resources.ResXFileRef;
 
-namespace LabelConvertor.Services
+namespace LabelConverter.Services
 {
 	public static class ConvertService
 	{

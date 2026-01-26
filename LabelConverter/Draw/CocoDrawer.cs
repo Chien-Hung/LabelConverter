@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using static LabelConvertor.CocoToVoc;
+using static LabelConverter.CocoToVoc;
 
-namespace LabelConvertor.Draw
+namespace LabelConverter.Draw
 {
 	public class CocoDrawer : ILabelDrawer
 	{

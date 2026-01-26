@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace LabelConvertor.Draw
+namespace LabelConverter.Draw
 {
 	public class YoloDrawer : ILabelDrawer
 	{

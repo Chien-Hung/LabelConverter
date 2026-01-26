@@ -6,10 +6,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LabelConvertor.CocoToVoc;
+using static LabelConverter.CocoToVoc;
 using System.Xml.Linq;
 
-namespace LabelConvertor
+namespace LabelConverter
 {
 	public class CocoDataset
 	{

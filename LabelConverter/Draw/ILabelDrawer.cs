@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LabelConvertor.Draw
+namespace LabelConverter.Draw
 {
 	public interface ILabelDrawer
 	{

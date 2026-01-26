@@ -1,5 +1,9 @@
 # LabelConvertor
 
+Deep learning object detection data label format converter (voc, yolo, coco).
+
+Example files can be downloaded from the Releases page.
+
 ![alt tag](./assets/setting.jpg)
 
 ![alt tag](./assets/compare.jpg)

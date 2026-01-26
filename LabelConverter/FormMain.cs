@@ -1,5 +1,5 @@
-﻿using LabelConvertor.Draw;
-using LabelConvertor.Services;
+﻿using LabelConverter.Draw;
+using LabelConverter.Services;
 using Newtonsoft.Json;
 using Ookii.Dialogs.WinForms;
 using System;
@@ -13,12 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static LabelConvertor.CocoToVoc;
-using LabelConvertor.UI;
+using static LabelConverter.CocoToVoc;
+using LabelConverter.UI;
 using System.Xml.Serialization;
 
 
-namespace LabelConvertor
+namespace LabelConverter
 {
 	public partial class FormMain : Form
 	{	

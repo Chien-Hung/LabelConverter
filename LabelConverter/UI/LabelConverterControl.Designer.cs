@@ -1,4 +1,4 @@
-﻿namespace LabelConvertor
+﻿namespace LabelConverter
 {
 	partial class LabelConverterControl
 	{
