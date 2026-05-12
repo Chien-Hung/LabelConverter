@@ -1,4 +1,4 @@
-﻿using LabelConverter.Draw;
+using LabelConverter.Draw;
 using LabelConverter.Services;
 using System;
 using System.Collections.Generic;
@@ -361,8 +361,14 @@ namespace LabelConverter
 
 		private void showClassesForm (string[] classesTrain, string[] classesVal, string[] classesTest)
 		{
-			var allClasses = classesTrain.Union (classesVal).Distinct().ToList();
-			if (classesTest != null)
+			var allClasses = classesTrain.ToList();
+
+            if (classesVal != null)
+            {
+                allClasses = classesTrain.Union(classesVal).Distinct().ToList();
+            }
+
+            if (classesTest != null)
 			{
 				allClasses = allClasses.Union (classesTest).Distinct ().ToList ();
 			}
@@ -383,7 +389,9 @@ namespace LabelConverter
 					ID = index + 1, // 編號列，從 1 開始
 					Name = c,
 					Train = classesTrain.Contains(c) ? "" : "X",
-					Val = classesVal.Contains(c) ? "" : "X",
+					Val = classesVal != null
+						? (classesVal.Contains(c) ? "" : "X")
+						: "",
 					Test = classesTest != null
 						? (classesTest.Contains(c) ? "" : "X")
 						: ""
@@ -423,10 +431,14 @@ namespace LabelConverter
 			};
 
 			// 計算最大行數
-			int n = classesTest == null 
-				? Math.Max(classesTrain.Length, classesVal.Length)
-				: Math.Max(Math.Max(classesTrain.Length, classesVal.Length), classesTest.Length);
-			dgv2.Rows.Clear ();
+            int n = new[]
+			{
+				classesTrain?.Length ?? 0,
+				classesVal?.Length ?? 0,
+				classesTest?.Length ?? 0
+			}.Max();
+
+            dgv2.Rows.Clear ();
 			dgv2.Rows.Add (n);
 
 			// 填充數據
@@ -435,7 +447,7 @@ namespace LabelConverter
 				dgv2.Rows [i].Cells [0].Value = i + 1; // 設置 ClassId
 				if (i < classesTrain.Length)
 					dgv2.Rows [i].Cells [1].Value = classesTrain [i]; // 設置 Train
-				if (i < classesVal.Length)
+				if (classesVal != null && i < classesVal.Length)
 					dgv2.Rows [i].Cells [2].Value = classesVal [i]; // 設置 Val
 				if (classesTest != null && i < classesTest.Length)
 					dgv2.Rows [i].Cells [3].Value = classesTest [i]; // 設置 Val
@@ -450,64 +462,57 @@ namespace LabelConverter
 			form.ShowDialog ();
 		}
 
-		public string[] GetUnionClasses ()
+        public string[] GetUnionClasses()
+        {
+            IEnumerable<string> classesAll = Enumerable.Empty<string>();
+
+            if (cmbMode.Text.StartsWith("VOC"))
+            {
+                classesAll = GetClasses(
+                    txtVocLabelTrain.Text,
+                    chkVal.Checked ? txtVocLabelVal.Text : null,
+                    chkTest.Checked ? txtVocLabelTest.Text : null,
+                    VocToYoloConverter.ExtractClasses);
+            }
+            else if (cmbMode.Text.StartsWith("YOLO"))
+            {
+                classesAll = GetClasses(
+                    txtYoloLabelTrain.Text,
+                    chkVal.Checked ? txtYoloLabelVal.Text : null,
+                    chkTest.Checked ? txtYoloLabelTest.Text : null,
+                    YoloToVOC.ExtractClasses);
+            }
+            else if (cmbMode.Text.StartsWith("COCO"))
+            {
+                classesAll = GetClasses(
+                    txtJsonFileTrain.Text,
+                    chkVal.Checked ? txtJsonFileVal.Text : null,
+                    chkTest.Checked ? txtJsonFileTest.Text : null,
+                    CocoToVoc.ExtractClasses);
+            }
+
+            return classesAll.ToArray();
+        }
+
+        private IEnumerable<string> GetClasses(
+			string trainPath,
+			string valPath,
+			string testPath,
+			Func<string, string[]> extractFunc)
 		{
-			string[] classesAll = null;
+			var result = new HashSet<string>(extractFunc(trainPath));
 
-			if (cmbMode.Text.StartsWith ("VOC"))
+			if (!string.IsNullOrWhiteSpace(valPath))
 			{
-				var vocDirTrain = txtVocLabelTrain.Text;
-				var classesTrain = VocToYoloConverter.ExtractClasses (vocDirTrain);
-
-				var vocDirVal = txtVocLabelVal.Text;
-				var classesVal = VocToYoloConverter.ExtractClasses (vocDirVal);
-				
-				classesAll = classesTrain.Union (classesVal).Distinct ().ToArray ();
-
-				if (chkTest.Checked)
-				{
-					var vocDirTest = txtVocLabelTest.Text;
-					string[] classesTest = VocToYoloConverter.ExtractClasses (vocDirTest);
-					classesAll = classesAll.Union (classesTest).Distinct ().ToArray ();
-				}
-			}
-			else if (cmbMode.Text.StartsWith ("YOLO"))
-			{
-				var yoloDirTrain = txtYoloLabelTrain.Text;
-				var classesTrain = YoloToVOC.ExtractClasses (yoloDirTrain);
-
-				var yoloDirVal = txtYoloLabelVal.Text;
-				var classesVal = YoloToVOC.ExtractClasses (yoloDirVal);
-
-				classesAll = classesTrain.Union (classesVal).Distinct ().ToArray ();
-
-				if (chkTest.Checked)
-				{
-					var yoloDirTest = txtYoloLabelTest.Text;
-					string[] classesTest = YoloToVOC.ExtractClasses (yoloDirTest);
-					classesAll = classesAll.Union (classesTest).Distinct ().ToArray ();
-				}
-			}
-			else if (cmbMode.Text.StartsWith ("COCO"))
-			{
-				var jsonFileTrain = txtJsonFileTrain.Text;
-				var classesTrain = CocoToVoc.ExtractClasses (jsonFileTrain);
-				
-				var jsonFileVal = txtJsonFileVal.Text;
-				var classesVal = CocoToVoc.ExtractClasses (jsonFileVal);
-
-				classesAll = classesTrain.Union (classesVal).Distinct ().ToArray ();
-
-				if (chkTest.Checked)
-				{
-					var jsonFileTest = txtJsonFileTest.Text;
-					string[] classesTest = CocoToVoc.ExtractClasses (jsonFileTest);
-					classesAll = classesAll.Union (classesTest).Distinct ().ToArray ();
-				}
+				result.UnionWith(extractFunc(valPath));
 			}
 
-			return classesAll; 
+			if (!string.IsNullOrWhiteSpace(testPath))
+			{
+				result.UnionWith(extractFunc(testPath));
+			}
+
+			return result;
 		}
-
-	}
+    }
 }
