@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -92,9 +92,10 @@ namespace LabelConverter
 			foreach (var xmlFile in Directory.GetFiles (vocDir, "*.xml"))
 			{
 				var anno = VocParser.Parse(xmlFile);
+				var fileName = Path.GetFileNameWithoutExtension(xmlFile);  // 使用xml檔名避免anno內檔名不一致錯誤
 				string txtPath = Path.Combine(
 					outputDir,
-					Path.ChangeExtension(anno.Filename, ".txt")
+					Path.ChangeExtension(fileName, ".txt")
 				);
 
 				using (StreamWriter sw = new StreamWriter (txtPath))
@@ -201,8 +202,8 @@ namespace LabelConverter
 				coco.images.Add(new ImageInfo
 				{
 					id = imageId,
-					file_name = voc.Filename,
-					width = voc.Size.Width,
+					file_name = Path.GetFileNameWithoutExtension(xmlFile),  // 使用xml檔名避免anno內檔名不一致錯誤
+                    width = voc.Size.Width,
 					height = voc.Size.Height,
 					license = null,
 					coco_url = null,
